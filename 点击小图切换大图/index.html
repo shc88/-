@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+				
+				 }
+				 #mask{
+					 width:1080px;
+					 margin: 0 auto;
+					 
+					 }
+					 body{
+						  background-image: url(img/1.jpg);
+						  
+					 }
+					#mask img{
+						 cursor: pointer;
+						 margin-left: 20px;
+						  }
+				 
+		</style>
+	</head>
+	<body>
+		<div id="mask">
+			<img src="img/1.jpg" width="150" height="100">
+			<img src="img/2.jpg" width="100"  height="150">
+			<img src="img/3.jpg" width="100"  height="150">
+		</div>
+		<script type="text/javascript">
+			var imgs=document.getElementsByTagName("img");
+			for(var i =0;i<imgs.length;i++){
+				imgs[i].onclick=function(){
+					  document.body.style.backgroundImage="url("+this.src+")";
+					  document.body.style.backgroundRepeat="no-repeat";
+				}
+			}
+			
+		</script>
+	</body>
+</html>
